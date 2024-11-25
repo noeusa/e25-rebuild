@@ -35,7 +35,7 @@ jobs:
           armbian_target:             "${{inputs.armbian_target}}"
           armbian_release:            "${{inputs.armbian_release}}"
           armbian_kernel_branch:      "vendor"
-          armbian_ui:                 "server"
+          armbian_ui:                 "mininal"
           armbian_board:              "radxa-e25"
           armbian_release_tittle:     "Armbian SDK"
           armbian_release_body:       "Virtual images for x86 and arm64"
