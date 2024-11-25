@@ -1,4 +1,5 @@
-name: "Build One by One (anyone)"
+name: "Build"
+run-name: Build Image or Kernel
 on:
   workflow_dispatch:
     inputs:
