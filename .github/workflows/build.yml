@@ -1,5 +1,5 @@
-name: "Build"
-run-name: Build Image or Kernel
+name: "Build Armbian"
+run-name: Build Armbian Image or Kernel
 on:
   workflow_dispatch:
     inputs:
@@ -23,19 +23,13 @@ on:
         - trixie
         - sid
         default: 'jammy'
-
-      armbian_version:
-        description: 'Version'
-        required: false
-        default: ''
 jobs:
-
   build:
     name: "Build Armbian"
     runs-on: ubuntu-latest
     steps:
 
-      - uses: hanenoe/e25-rebuild@e25-wwan
+      - uses: noeusa/e25-rebuild@e25-wwan
         with:
           armbian_token:              "${{secrets.GITHUB_TOKEN}}"
           armbian_target:             "${{inputs.armbian_target}}"
